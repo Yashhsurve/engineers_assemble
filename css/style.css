@@ -1,3 +1,4 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -16,15 +17,19 @@ body {
   padding: 20px;
 }
 
-/* HEADER */
+/* ================= HEADER / NAVBAR ================= */
 .header {
   background: #0f172a;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .logo {
@@ -39,19 +44,41 @@ body {
   width: 36px;
 }
 
-nav a {
+/* NAV LINKS (DESKTOP) */
+#nav-links {
+  display: flex;
+  gap: 18px;
+}
+
+#nav-links a {
   color: #cbd5f5;
-  margin-left: 16px;
   text-decoration: none;
   font-size: 14px;
 }
 
-nav a:hover,
-nav a.active {
+#nav-links a:hover,
+#nav-links a.active {
   color: #facc15;
 }
 
-/* HERO */
+/* HAMBURGER BUTTON */
+#menu-btn {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#menu-btn span {
+  width: 24px;
+  height: 3px;
+  background: #ffffff;
+  border-radius: 2px;
+}
+
+/* ================= HERO ================= */
 .hero {
   background: linear-gradient(135deg, #1e293b, #0f172a);
   color: #fff;
@@ -72,7 +99,7 @@ nav a.active {
   margin-top: 25px;
 }
 
-/* BUTTONS */
+/* ================= BUTTONS ================= */
 .btn {
   padding: 10px 18px;
   border-radius: 6px;
@@ -91,7 +118,7 @@ nav a.active {
   color: #facc15;
 }
 
-/* SECTIONS */
+/* ================= SECTIONS ================= */
 .section {
   padding: 60px 0;
 }
@@ -117,7 +144,7 @@ nav a.active {
   color: #475569;
 }
 
-/* FEATURES */
+/* ================= FEATURES ================= */
 .features {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -132,7 +159,7 @@ nav a.active {
   text-align: center;
 }
 
-/* CARDS */
+/* ================= CARDS ================= */
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -146,7 +173,7 @@ nav a.active {
   box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 .footer {
   background: #0f172a;
   color: #cbd5f5;
@@ -163,4 +190,33 @@ nav a.active {
   color: #facc15;
   margin-left: 15px;
   text-decoration: none;
+}
+
+/* ================= MOBILE NAV ================= */
+@media (max-width: 768px) {
+  #menu-btn {
+    display: flex;
+  }
+
+  #nav-links {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: #0f172a;
+    flex-direction: column;
+    padding: 15px 20px;
+    border-radius: 8px;
+    display: none;
+    gap: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  }
+
+  #nav-links.show {
+    display: flex;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 10px;
+  }
 }

@@ -24,6 +24,13 @@
   <div class="container">
     <h2>Free Courses</h2>
 
+    <input
+    type="text"
+    id="courseSearch"
+    placeholder="Search courses..."
+    class="search"
+    />
+
     <!-- ADD NEW COURSE CARD BELOW -->
     <div class="card">
       <h3>Course Title</h3>
@@ -33,6 +40,25 @@
 
   </div>
 </section>
+
+<script>
+function filterCards(inputId, cardClass) {
+  const input = document.getElementById(inputId);
+
+  input.addEventListener("keyup", function () {
+    const filter = input.value.toLowerCase();
+    const cards = document.getElementsByClassName(cardClass);
+
+    for (let i = 0; i < cards.length; i++) {
+      const text = cards[i].innerText.toLowerCase();
+      cards[i].style.display = text.includes(filter) ? "block" : "none";
+    }
+  });
+}
+
+// initialize search
+filterCards("courseSearch", "card");
+</script>
 
 </body>
 </html>
