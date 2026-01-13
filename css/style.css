@@ -90,6 +90,7 @@ body {
   border-radius: 6px;
   font-weight: 600;
   text-decoration: none;
+  margin-right: 25px;
 }
 
 /* BUTTON HOVER ANIMATION - BASE */
@@ -114,6 +115,19 @@ body {
 }
 
 .btn-whatsapp {
+  border: #0f172a;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.topmate:hover {
+  transform: translateY(-4px);
+  background: linear-gradient(135deg, #ede9fe, #fae8ff);
+  color: #6b21a8;        /* rich purple */
+  box-shadow: 0 12px 26px rgba(168, 85, 247, 0.45);
+}
+
+.topmate {
   border: #0f172a;
   border-width: 1px;
   border-style: solid;
