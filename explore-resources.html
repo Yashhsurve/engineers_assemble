@@ -2,31 +2,34 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Explore Resources | Engineers Assemble</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header class="navbar">
-  <div class="logo">Engineers Assemble</div>
-  <nav>
+  <div class="nav-left">
+    <img src="assets/images/logo.png" class="logo">
+    <span class="brand">Engineers Assemble</span>
+  </div>
+  <nav class="nav-right">
     <a href="index.html">Home</a>
     <a href="explore-resources.html" class="active">Explore Resources</a>
   </nav>
 </header>
 
+<section class="hero small">
+  <h1>Explore Resources</h1>
+  <p>Courses, events, tools & opportunities — curated for students.</p>
+</section>
+
 <main class="container">
 
-  <section class="hero small">
-    <h1>Explore Resources</h1>
-    <p>Courses, events, tools & opportunities — curated for students.</p>
-  </section>
-
-  <!-- SEARCH -->
+  <!-- SEARCH (JS UNTOUCHED) -->
   <input 
-    type="text" 
-    id="searchInput" 
+    type="text"
+    id="searchInput"
     placeholder="Search resources..."
     class="search-box"
   />
@@ -34,17 +37,18 @@
   <!-- POSTS -->
   <section id="posts">
 
-    <!-- COPY–PASTE THIS BLOCK TO ADD NEW RESOURCE -->
     <article class="post">
       <h2>Top Free AI Courses – Beginner to Advanced</h2>
       <p>Handpicked AI courses covering ML, GenAI, and real-world projects.</p>
-      <a href="https://example.com" target="_blank">Explore Resource →</a>
+      <span class="date">📅 12 Jan 2026</span>
+      <a href="#" target="_blank">Explore Resource →</a>
     </article>
 
     <article class="post">
       <h2>Upcoming Hackathons for Engineering Students</h2>
       <p>National & international hackathons with certificates and prizes.</p>
-      <a href="https://example.com" target="_blank">View Details →</a>
+      <span class="date">📅 10 Jan 2026</span>
+      <a href="#" target="_blank">View Details →</a>
     </article>
 
   </section>
@@ -52,6 +56,7 @@
 </main>
 
 <footer class="footer">
+  <p>© Engineers Assemble</p>
   <p>Share knowledge. Grow together 🚀</p>
 </footer>
 
