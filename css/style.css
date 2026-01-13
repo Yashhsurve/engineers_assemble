@@ -128,6 +128,25 @@ body {
   box-shadow: 0 6px 16px rgba(0,0,0,0.08);
 }
 
+/* ABOUT SOCIAL LINKS */
+.about-socials {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+}
+
+.about-socials img {
+  width: 38px;
+  height: 38px;
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.about-socials img:hover {
+  transform: translateY(-4px) scale(1.15);
+  filter: drop-shadow(0 6px 10px rgba(59,130,246,0.35));
+}
+
 /* EXPLORE PAGE */
 .container {
   max-width: 900px;
