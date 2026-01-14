@@ -1,0 +1,99 @@
+/* ================= MOBILE ONLY ================= */
+@media (max-width: 768px) {
+    /* FIX logo + brand alignment in mobile */
+.nav-left {
+  justify-content: flex-start;
+}
+
+.brand {
+  margin-right: auto;
+}
+
+  body {
+    overflow-x: hidden;
+  }
+
+  /* NAVBAR */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 14px 20px;
+  }
+
+  .nav-left {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* HAMBURGER */
+ .hamburger {
+    display: block;
+    font-size: 26px;
+    cursor: pointer;
+    color: white;
+  }
+
+  /* NAV LINKS */
+  .nav-right {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    margin-top: 12px;
+  }
+
+  .nav-right a {
+    margin: 10px 0;
+    font-size: 16px;
+  }
+
+  .nav-right.show {
+    display: flex;
+  }
+
+  /* HERO */
+  .hero h1 {
+    font-size: 26px;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  /* SECTIONS */
+  .section {
+    padding: 45px 20px;
+  }
+
+  .section h2 {
+    font-size: 24px;
+  }
+
+  .section p {
+    font-size: 14px;
+  }
+
+  /* BUTTONS STACK */
+  .btn-primary {
+    display: block;
+    margin: 15px auto;
+  }
+
+  /* CARDS */
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* CONTAINER (EXPLORE PAGE) */
+  .container {
+    padding: 0 15px;
+  }
+}
+
+/* DESKTOP — HIDE HAMBURGER */
+@media (min-width: 769px) {
+  .hamburger {
+    display: none;
+  }
+}

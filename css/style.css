@@ -35,6 +35,13 @@ body {
   height: 34px;
 }
 
+.brand-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
 .nav-left {
   display: flex;
   align-items: center;
