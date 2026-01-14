@@ -1,12 +1,20 @@
 /* ================= MOBILE ONLY ================= */
 @media (max-width: 768px) {
     /* FIX logo + brand alignment in mobile */
+/* Keep logo+brand left, hamburger right */
 .nav-left {
-  justify-content: flex-start;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.brand {
-  margin-right: auto;
+/* logo + text act as ONE unit */
+.brand-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
 }
 
   body {
@@ -16,16 +24,17 @@
   /* NAVBAR */
   .navbar {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     padding: 14px 20px;
+    justify-content: space-between;
   }
 
   .nav-left {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
   /* HAMBURGER */
  .hamburger {
